@@ -1,5 +1,4 @@
 within PowerGrids.UsersGuide;
-
 package ReleaseNotes
   extends Modelica.Icons.ReleaseNotes;
   annotation(

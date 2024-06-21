@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Controls.TurbineGovernors;
-
 model GovHydro4PeltonFrancis
   extends BaseClasses.GovHydro4Base;
   Modelica.Blocks.Tables.CombiTable1Ds tableGvPgv(smoothness = Modelica.Blocks.Types.Smoothness.MonotoneContinuousDerivative1, table = [0.1, 0; 0.4, 0.42; 0.5, 0.56; 0.7, 0.8; 0.8, 0.9; 0.9, 0.97; 1, 1]) annotation(

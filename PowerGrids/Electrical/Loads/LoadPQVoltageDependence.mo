@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Loads;
-
 model LoadPQVoltageDependence "Load model with voltage dependent P and Q"
   extends PowerGrids.Electrical.BaseClasses.OnePortAC(
     final portVariablesPu=true,
@@ -9,7 +8,7 @@ model LoadPQVoltageDependence "Load model with voltage dependent P and Q"
 
   parameter Types.PerUnit alpha = 0 "Exponential of voltage ratio for actual P calculation";
   parameter Types.PerUnit beta = 0 "Exponential of voltage ratio for actual Q calculation";
-  
+
   parameter Types.ActivePower PRefConst = 0 "Constant active power entering the load at reference voltage";
   parameter Types.ReactivePower QRefConst = 0 "Constant reactive power entering the load at reference voltage";
   parameter Types.Voltage URef = UNom "Reference value of phase-to-phase voltage";

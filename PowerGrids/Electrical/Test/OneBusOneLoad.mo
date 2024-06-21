@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model OneBusOneLoad
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.Buses.InfiniteBus infiniteBus(SNom = 1e+07, UNom = 10000, portVariablesPu = true, theta = 0.523599) annotation(

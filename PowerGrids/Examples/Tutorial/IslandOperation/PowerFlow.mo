@@ -1,5 +1,4 @@
 within PowerGrids.Examples.Tutorial.IslandOperation;
-
 model PowerFlow
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.PowerFlow.PVBus GEN1(P = -4.5088e+08, SNom = 5e+08, U = 20825, UNom = 21000) annotation(

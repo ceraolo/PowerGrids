@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Buses;
-
 model EquivalentGrid "Equivalent grid model characterized by short circuit capacity"
   extends PowerGrids.Electrical.Buses.BaseClasses.BusBase(
     e = eSource,
@@ -7,7 +6,7 @@ model EquivalentGrid "Equivalent grid model characterized by short circuit capac
     UStart = URef, UPhaseStart = 0);
   extends Icons.Grid;
   import Modelica.ComplexMath;
-  
+
   parameter Types.Voltage URef = UNom "Reference phase-to-phase voltage at connection terminal";
   parameter Types.Angle UPhaseRef = 0 "Voltage phase angle at connection terminal";
   parameter Types.ApparentPower SSC "Short-circuit capacity";

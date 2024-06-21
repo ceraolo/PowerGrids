@@ -1,5 +1,4 @@
 within PowerGrids.UsersGuide;
-
 package Literature
   extends Modelica.Icons.References;
   annotation(

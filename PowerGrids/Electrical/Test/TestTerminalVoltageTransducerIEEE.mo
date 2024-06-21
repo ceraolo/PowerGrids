@@ -1,12 +1,15 @@
 within PowerGrids.Electrical.Test;
-
 model TestTerminalVoltageTransducerIEEE
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.VoltageTransducers.TerminalVoltageTransducerIEEE terminalVoltageTransducer(Rc = 1, Xc = 1, Tr = 1, initType = Modelica.Blocks.Types.Init.InitialOutput) annotation(
     Placement(visible = true, transformation(origin = {-3.55271e-15, 3.55271e-15}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
-  Modelica.ComplexBlocks.Sources.ComplexConstant V(k.re = -1, k.im = 1) annotation(
+  Modelica.ComplexBlocks.Sources.ComplexConstant V(k(
+                                                   re   = -1, im   = 1))
+                                                                        annotation(
     Placement(visible = true, transformation(origin = {-70, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.ComplexBlocks.Sources.ComplexConstant I(k.re = 1, k.im = 1) annotation(
+  Modelica.ComplexBlocks.Sources.ComplexConstant I(k(
+                                                   re   = 1, im   = 1))
+                                                                       annotation(
     Placement(visible = true, transformation(origin = {-70, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   connect(I.y, terminalVoltageTransducer.It) annotation(

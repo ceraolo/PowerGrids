@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model TestTransformerFixedRatioWithBreaker
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.Buses.InfiniteBus infiniteBus1(SNom = 1e+07, UNom = 5000, portVariablesPu = true, theta = 0.523599) annotation(

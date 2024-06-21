@@ -1,5 +1,4 @@
 within PowerGrids.Examples.ENTSOE;
-
 model TestCase3 "Test Case 3, Section 5.3, focuses on the dynamic behavior of the model for the synchronous machine with its whole control in response to a short-circuit"
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(

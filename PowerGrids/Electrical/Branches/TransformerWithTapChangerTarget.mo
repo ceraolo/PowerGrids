@@ -1,9 +1,9 @@
 within PowerGrids.Electrical.Branches;
 model TransformerWithTapChangerTarget
   extends TransformerWithTapChangerInterval(
-    final UMax = targetValue + deadBand, 
+    final UMax = targetValue + deadBand,
     final UMin = targetValue - deadBand);
-  
+
   parameter Types.Voltage targetValue(min = 0) "Phase-to-phase voltage target value";
   parameter Types.Voltage deadBand(min = 0) "Acceptable dead-band next to the phase-to-phase voltage target value";
 

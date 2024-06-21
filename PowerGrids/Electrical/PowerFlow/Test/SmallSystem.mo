@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.PowerFlow.Test;
-
 model SmallSystem
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(
@@ -44,4 +43,5 @@ equation
   connect(load3.terminal, bus.terminal) annotation(
     Line(points = {{0, -50}, {0, -50}, {0, -30}, {0, -30}}));
 annotation(
-    Documentation(info = "<html><head></head><body>Small system with a few PQ buses, one PV bus and one slack bus connected through constant impedant lines.</body></html>"));end SmallSystem;
+    Documentation(info = "<html><head></head><body>Small system with a few PQ buses, one PV bus and one slack bus connected through constant impedant lines.</body></html>"));
+end SmallSystem;

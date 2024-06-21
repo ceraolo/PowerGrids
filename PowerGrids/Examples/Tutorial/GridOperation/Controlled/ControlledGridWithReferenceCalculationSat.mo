@@ -1,6 +1,7 @@
 within PowerGrids.Examples.Tutorial.GridOperation.Controlled;
 model ControlledGridWithReferenceCalculationSat "System under automatic control with automatic computation of set point offsets - saturation case"
-  extends ControlledGridWithReferenceCalculation(AVR.VrMax = 0.5);
+  extends ControlledGridWithReferenceCalculation(AVR(
+                                                 VrMax     = 0.5));
   annotation(
     Icon(coordinateSystem(grid = {0.1, 0.1})),
     Diagram(coordinateSystem(extent = {{-160, -100}, {160, 100}}, grid = {0.5, 0.5})),

@@ -1,5 +1,4 @@
 within PowerGrids.Controls.Test;
-
 model TestIntegratorWithNonWindupLimiter
   extends Modelica.Icons.Example;
   PowerGrids.Controls.IntegratorWithNonWindupLimiter integrator1(

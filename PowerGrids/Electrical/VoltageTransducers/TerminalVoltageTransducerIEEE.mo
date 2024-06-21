@@ -1,8 +1,8 @@
 within PowerGrids.Electrical.VoltageTransducers;
 model TerminalVoltageTransducerIEEE "Terminal voltage transducer IEEE"
-  parameter Modelica.SIunits.Time Tr = 0 "Transducer time constant";
-  parameter Modelica.SIunits.PerUnit Rc = 0 "Load compensation resistance";
-  parameter Modelica.SIunits.PerUnit Xc = 0 "Load compensation reactance";
+  parameter Modelica.Units.SI.Time Tr=0 "Transducer time constant";
+  parameter Modelica.Units.SI.PerUnit Rc=0 "Load compensation resistance";
+  parameter Modelica.Units.SI.PerUnit Xc=0 "Load compensation reactance";
   parameter Modelica.Blocks.Types.Init initType=Modelica.Blocks.Types.Init.NoInit "Type of initialization (1: no init, 2: steady state, 3/4: initial output)" annotation(Evaluate=true,
       Dialog(group="Initialization"));
   parameter Real yStart=0 "Initial or guess value of output (= state)" annotation (

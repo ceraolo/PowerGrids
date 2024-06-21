@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.PowerFlow.Test;
-
 model OneSlackOneLoadWithOneLine
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(
@@ -16,4 +15,5 @@ equation
   connect(line.terminalA, slack.terminal) annotation(
     Line(points = {{0, 0}, {0, 20}}));
 annotation(
-    Documentation(info = "<html><head></head><body>Simple test case with one slack bus and one PQ bus connected through a <a href=\"modelica://PowerGrids.Electrical.Branches.LineConstantImpedance\"> LineConstantImpedance </a> line. Adds a line between the slack and the PQ buses compared to <a href=\"modelica://PowerGrids.Electrical.PowerFlow.Test.OneSlackOneLoad\"> OneSlackOneLoad </a> test.</body></html>"));end OneSlackOneLoadWithOneLine;
+    Documentation(info = "<html><head></head><body>Simple test case with one slack bus and one PQ bus connected through a <a href=\"modelica://PowerGrids.Electrical.Branches.LineConstantImpedance\"> LineConstantImpedance </a> line. Adds a line between the slack and the PQ buses compared to <a href=\"modelica://PowerGrids.Electrical.PowerFlow.Test.OneSlackOneLoad\"> OneSlackOneLoad </a> test.</body></html>"));
+end OneSlackOneLoadWithOneLine;

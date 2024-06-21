@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model OneBusImpedanceOneVariableLoad
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.Buses.InfiniteBus bus1(PStart = -1e+07,R = 0.04,SNom = 1e+08, UNom = 10000, X = 0.4, generatorConvention = true, portVariablesPhases = true, portVariablesPu = true)  annotation(

@@ -1,5 +1,4 @@
 within PowerGrids.Examples.IEEE14bus;
-
 model IEEE14busLine1to5Opening "Simulation of the opening of line 1 to 5 at t = 1 s"
   extends IEEE14busStaticNetwork(L1to5(useBreakerB = true));
   Modelica.Blocks.Sources.BooleanExpression L1to5BreakerState(y = time < 1)  annotation(

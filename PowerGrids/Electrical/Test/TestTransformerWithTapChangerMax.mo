@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model TestTransformerWithTapChangerMax
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.Buses.InfiniteBusVariableVoltage infiniteBus(R = 0, SNom = 1e+06, UNom = 1000, X = 0, portVariablesPu = true, useUIn = true) annotation(

@@ -1,5 +1,4 @@
 within PowerGrids.Controls.Test;
-
 model TestLeadLag
   extends Modelica.Icons.Example;
   PowerGrids.Controls.LeadLag leadLag(T1 = 4, T2 = 2, initType = Modelica.Blocks.Types.Init.SteadyState, k = 10, yStart = 10) annotation(

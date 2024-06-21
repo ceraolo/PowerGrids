@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.BaseClasses;
-
 partial model TwoPortAC "Base class for two-port AC components"
   parameter Types.Voltage UNomA(start = 400e3) "Nominal/rated voltage, port A" annotation(Evaluate = true);
   parameter Types.Voltage UNomB = UNomA "Nominal/rated voltage, port B" annotation(Evaluate = true);

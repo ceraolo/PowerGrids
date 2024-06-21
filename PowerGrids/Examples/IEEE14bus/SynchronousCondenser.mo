@@ -1,5 +1,4 @@
 within PowerGrids.Examples.IEEE14bus;
-
 model SynchronousCondenser "Model of a synchronous condenser for the IEEE-14 bus system"
   extends Icons.Machine;
   PowerGrids.Electrical.Machines.SynchronousMachine4Windings GEN(portVariablesPhases = true)  annotation(

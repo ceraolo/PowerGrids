@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Loads;
-
 model LoadImpedancePQ "Load model with impedance specified by PRef and QRef"
   extends PowerGrids.Electrical.Buses.BaseClasses.BusBase(
     e = Complex(0),

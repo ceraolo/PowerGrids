@@ -1,5 +1,4 @@
 within PowerGrids.Examples.ENTSOE;
-
 model TestCase2 "Test Case 2, Section 5.2, focuses on the dynamic behavior of the model for the synchronous generator and its governor"
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(
@@ -29,7 +28,7 @@ model TestCase2 "Test Case 2, Section 5.2, focuses on the dynamic behavior of th
   Types.PerUnit AA_02_GEN_PPu = GEN.port.PGenPu "Fig. 5-4, active power of the synchronous machine";
   Types.PerUnit AA_03_GEN_PmechPu = GEN.PmPu "Fig. 5-5, mechanical power of the synchronous machine";
   Types.PerUnit AA_04_GEN_omegaPu = GEN.omegaPu "Fig. 5-6, speed";
-  
+
 equation
   connect(GEN.VPu, AVR.VcPu) annotation(
     Line(points = {{-16, -6}, {0, -6}, {0, 56}, {-120, 56}, {-120, -14}, {-72, -14}}, color = {0, 0, 127}));

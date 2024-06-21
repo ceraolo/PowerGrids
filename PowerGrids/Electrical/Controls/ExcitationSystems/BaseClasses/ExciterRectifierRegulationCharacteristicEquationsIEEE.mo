@@ -5,14 +5,14 @@ model ExciterRectifierRegulationCharacteristicEquationsIEEE "Exciter rectifier r
 algorithm
   if u < 0.433 then
     y := 1 - 0.577*u;
-  elseif u < 0.75 then  
-    y := sqrt(0.75 - u^2); 
-  elseif u < 1 then  
+  elseif u < 0.75 then
+    y := sqrt(0.75 - u^2);
+  elseif u < 1 then
     y := 1.732*(1-u);
   else
     y := 0;
   end if;
-    
+
   annotation(
     Icon(coordinateSystem(grid = {0.1, 0.1}, initialScale = 0.1), graphics = {Rectangle(origin = {0, -1}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid, extent = {{-100, 101}, {100, -99}}), Text(origin = {1, -1}, extent = {{-85, 49}, {85, -49}}, textString = "Fex = f(In)")}),
     Diagram(coordinateSystem(extent = {{-200, -100}, {200, 100}})),

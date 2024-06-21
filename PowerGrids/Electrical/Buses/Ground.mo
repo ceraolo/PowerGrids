@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Buses;
-
 model Ground
   extends Icons.Ground;
   PowerGrids.Interfaces.TerminalAC terminal annotation(

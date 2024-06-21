@@ -1,5 +1,4 @@
 within PowerGrids.Examples.ENTSOE;
-
 model SteadyState "Reproduces the basic static power flow, see fig. 3-1 of the report"
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(

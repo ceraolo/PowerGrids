@@ -1,5 +1,4 @@
 within PowerGrids.Controls.Test;
-
 model TestLeadLagWithNonWindupLimiter
   extends Modelica.Icons.Example;
   PowerGrids.Controls.LeadLagWithNonWindupLimiter leadLagPositiveGain(T1 = 1, T2 = 2, initType = Modelica.Blocks.Types.Init.SteadyState, k = 2, yMax = 5, yMin = -5, yStart = 2) annotation(
@@ -7,8 +6,8 @@ model TestLeadLagWithNonWindupLimiter
   Modelica.Blocks.Sources.TimeTable inputSignal(table = [0, 1; 1, 1; 1, 4; 10, 4; 10, -4; 100, -4])  annotation(
     Placement(visible = true, transformation(origin = {-96, -12}, extent = {{-16, -16}, {16, 16}}, rotation = 0)));
   Modelica.Blocks.Sources.RealExpression leadLagAnalyticSolution(
-    y = 2 
-        + (if time < 1 then 0 else 3) 
+    y = 2
+        + (if time < 1 then 0 else 3)
         + (if time < 10 then 0 elseif time < 11.54 then (-13 / 2) - 13 / 2 * (1 - exp(-(time - 10) / 2)) else -10)) annotation(
     Placement(visible = true, transformation(origin = {-10, 72}, extent = {{-30, -30}, {30, 30}}, rotation = 0)));
   PowerGrids.Controls.LeadLagWithNonWindupLimiter leadLagNegativeGain(T1 = 1, T2 = 2, initType = Modelica.Blocks.Types.Init.SteadyState, k = -2, yMax = 5, yMin = -5, yStart = 2) annotation(

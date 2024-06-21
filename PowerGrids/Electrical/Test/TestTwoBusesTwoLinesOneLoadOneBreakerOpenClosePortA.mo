@@ -1,6 +1,7 @@
 within PowerGrids.Electrical.Test;
 model TestTwoBusesTwoLinesOneLoadOneBreakerOpenClosePortA
-  extends TestTwoBusesTwoTransmLinesWithBreakersOneLoad(transmissionLine2.useBreakerA = true);
+  extends TestTwoBusesTwoTransmLinesWithBreakersOneLoad(transmissionLine2(
+                                                        useBreakerA                   = true));
   Modelica.Blocks.Sources.BooleanExpression BreakerStatus(y = time < 1 or time >= 10)  annotation(
     Placement(visible = true, transformation(origin = {22, 22}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
 equation

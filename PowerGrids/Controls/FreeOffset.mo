@@ -1,16 +1,15 @@
 within PowerGrids.Controls;
-
 model FreeOffset
   extends Modelica.Blocks.Interfaces.SO;
   import PowerGrids.Types.Choices.InitializationOption;
 
   parameter Boolean use_u = false "= true if time varying output is required";
-  final parameter Boolean fixedOffsetDefault = 
+  final parameter Boolean fixedOffsetDefault =
     if systemPowerGrids.initOpt == InitializationOption.globalSteadyStateFixedPowerFlow or
        systemPowerGrids.initOpt == InitializationOption.localSteadyStateFixedPowerFlow
     then false
     else true "Default choice of fixedOffsetDefault from system object";
-  parameter Boolean fixedOffset = fixedOffsetDefault "= true if offset is fixed to zero, = false if offset is left free";    
+  parameter Boolean fixedOffset = fixedOffsetDefault "= true if offset is fixed to zero, = false if offset is left free";
   final parameter Real offset(fixed = false) "Free offset of output y";
 
   outer PowerGrids.Electrical.System systemPowerGrids "Reference to system object";

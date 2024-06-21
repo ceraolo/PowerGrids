@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.PowerFlow.Test;
-
 model OneSlackOnePVWithOneLine
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(

@@ -2,13 +2,13 @@ within PowerGrids.Electrical.Test;
 model TestTapChangerLogicMax
   extends Modelica.Icons.Example;
   extends PowerGrids.Electrical.Branches.BaseClasses.TapChangerPhaseShifterLogicMax(
-    t1st = 3 "Time lag before changing the first tap", 
-    tNext = 1 "Time lag before changing subsequent taps", 
-    Ntap = 10 "Number of taps", 
-    actionSel = ActionType.direct "Tap direct or reverse action selector", 
-    lockedStart = false "Wether the tap-changer/phase-shifter is initially locked", 
-    runningStart = true "Wether the tap-changer/phase-shifter is initially running", 
-    tapStart = 10 "Initial tap", 
+    t1st = 3 "Time lag before changing the first tap",
+    tNext = 1 "Time lag before changing subsequent taps",
+    Ntap = 10 "Number of taps",
+    actionSel = ActionType.direct "Tap direct or reverse action selector",
+    lockedStart = false "Wether the tap-changer/phase-shifter is initially locked",
+    runningStart = true "Wether the tap-changer/phase-shifter is initially running",
+    tapStart = 10 "Initial tap",
     stateStart = State.standard "Initial state");
 equation
   locked = time >= 5 and time < 8;

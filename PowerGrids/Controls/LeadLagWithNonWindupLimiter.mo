@@ -1,5 +1,4 @@
 within PowerGrids.Controls;
-
 model LeadLagWithNonWindupLimiter "Lead-lag filter with non-windup limiter"
   extends Modelica.Blocks.Interfaces.SISO(y(start = yStart));
   parameter Real k = 1 "Gain";
@@ -17,8 +16,13 @@ model LeadLagWithNonWindupLimiter "Lead-lag filter with non-windup limiter"
     Dialog(tab = "Advanced"));
   Modelica.Blocks.Math.Gain gain_dir(k = k * T1 / T2) annotation(
     Placement(visible = true, transformation(origin = {-4, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Nonlinear.Limiter limiter_y(limitsAtInit = true, strict = strict, uMax = yMax, uMin = yMin) annotation(
-    Placement(visible = true, transformation(origin = {32, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Nonlinear.Limiter limiter_y(
+    strict=strict,
+    uMax=yMax,
+    uMin=yMin) annotation (Placement(visible=true, transformation(
+        origin={32,0},
+        extent={{-10,-10},{10,10}},
+        rotation=0)));
   Modelica.Blocks.Math.Feedback feedback_y annotation(
     Placement(visible = true, transformation(origin = {46, -52}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   Modelica.Blocks.Continuous.Integrator integ_fb(initType = initType, k = 1 / T1, y_start = yStart) annotation(

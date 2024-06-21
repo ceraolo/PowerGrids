@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.PowerFlow.Test;
-
 model OneSlackOneLoad
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(
@@ -12,4 +11,5 @@ equation
   connect(load.terminal, slack.terminal) annotation(
     Line(points = {{0, -4}, {0, 20}}));
 annotation(
-    Documentation(info = "<html><head></head><body>Simple test case with one slack bus connected to a PQ bus.</body></html>"));end OneSlackOneLoad;
+    Documentation(info = "<html><head></head><body>Simple test case with one slack bus connected to a PQ bus.</body></html>"));
+end OneSlackOneLoad;

@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.PowerFlow;
-
 model PQBus "PQ bus"
   extends BaseClasses.OnePortAC(portVariablesPhases = true);
   extends Icons.Load;
@@ -13,5 +12,5 @@ annotation(
     Documentation(info = "<html>
 <p>PQBus: prescribes the active power <code>P</code> and the reactive power <code>Q</code> entering the bus.</p>
 </html>"));
-    
+
 end PQBus;

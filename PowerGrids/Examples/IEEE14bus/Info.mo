@@ -1,5 +1,4 @@
 within PowerGrids.Examples.IEEE14bus;
-
 package Info "Information"
   extends Modelica.Icons.Information;
   annotation(

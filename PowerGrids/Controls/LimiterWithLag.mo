@@ -1,38 +1,37 @@
 within PowerGrids.Controls;
 block LimiterWithLag
   extends Modelica.Blocks.Interfaces.SISO;
-  
+
   encapsulated type State = enumeration(
     upperSat "Upper limit reached",
     lowerSat "Lower limit reached",
-    notSat   "u is in range"
-  );
-  
+    notSat   "u is in range");
+
   parameter Real uMax  "Upper limit";
   parameter Real uMin  "Lower limit";
   parameter Types.Time LagMax  "Time lag before taking action when u going above uMax";
   parameter Types.Time LagMin  "Time lag before taking action when u going below uMin";
   parameter State stateStart = State.notSat "saturation initial state";
   final parameter Boolean useLag = (LagMax > 0) or (LagMin > 0) "Lags are used only if at least one is not null";
-  
+
   State state(start = stateStart, fixed = true) "saturation state";
   discrete SI.Time saturationLimitReached(start = 0, fixed = true) "Time in which the saturation limit is reached";
   Boolean satON "Saturation is active";
 
-algorithm  
+algorithm
   when u > uMax then
     state := State.upperSat;
     saturationLimitReached := time;
-  end when;  
+  end when;
 
   when u < uMin then
     state := State.lowerSat;
     saturationLimitReached := time;
-  end when;  
+  end when;
 
-  when u < uMax and u > uMin then  
+  when u < uMax and u > uMin then
     state := State.notSat;
-  end when;     
+  end when;
 
   when useLag and state == State.notSat then
     satON := false;
@@ -45,11 +44,11 @@ algorithm
   if not useLag then
     satON := true;
   end if;
-    
+
 equation
   // The simplified model has no saturation, to make the controller equations linear
   y = homotopy(
-    actual = if state == State.upperSat and satON then uMax 
+    actual = if state == State.upperSat and satON then uMax
              elseif state == State.lowerSat and satON then uMin
              else u,
     simplified =  u);

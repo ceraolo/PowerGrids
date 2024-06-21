@@ -3,7 +3,8 @@ model DerivativeLag "Derivative filter with lag"
   extends Modelica.Blocks.Interfaces.SISO(y(start = yStart));
   parameter SI.Time T1 "Lag time constant";
   parameter SI.Time Td = T1 "Derivative time constant";
-  parameter Boolean noDynamics = not(T1 > 0) "Trivial configuration with no dynamics G(s) = 1";
+  parameter Boolean noDynamics = not
+                                    (T1 > 0) "Trivial configuration with no dynamics G(s) = 1";
   parameter Modelica.Blocks.Types.Init initType=Modelica.Blocks.Types.Init.NoInit "Type of initialization (1: no init, 2: steady state, 3/4: initial output)" annotation(Evaluate=true,
       Dialog(group="Initialization"));
   parameter Real yStart=0 "Initial or guess value of output (= state)" annotation (
@@ -13,7 +14,7 @@ model DerivativeLag "Derivative filter with lag"
   Modelica.Blocks.Math.Gain gain(k = if noDynamics then 1 else Td / T1)  annotation(
     Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Continuous.Integrator integrator(
-    initType = initType, 
+    initType = initType,
     k = 1 / T1,
     y_start = yStart*Td/T1) if not noDynamics  annotation(
     Placement(visible = true, transformation(origin = {2, -40}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));

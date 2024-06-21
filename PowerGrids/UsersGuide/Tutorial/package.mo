@@ -1,5 +1,4 @@
 within PowerGrids.UsersGuide;
-
 package Tutorial
   extends Modelica.Icons.Information;
 

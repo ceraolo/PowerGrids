@@ -1,8 +1,7 @@
 within PowerGrids.Examples;
-
 package Tutorial "Tutorial examples of increasing complexity"
   extends Modelica.Icons.ExamplesPackage;
-  
+
 
 
   annotation(

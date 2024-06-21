@@ -3,7 +3,9 @@ model PIWithNonWindupLimiter "Proportional-Integral filter with non-windup limit
   extends Modelica.Blocks.Interfaces.SISO;
   parameter Real Kp "Proportional gain";
   parameter Real Ki(unit = "1/s") = 0 "Integral constant";
-  parameter Boolean noDynamics = not(Ki > 0) and not(Ki < 0) "Trivial configuration with no dynamics G(s) = k";
+  parameter Boolean noDynamics = not
+                                    (Ki > 0) and not
+                                                    (Ki < 0) "Trivial configuration with no dynamics G(s) = k";
   parameter Real yMax = 1 "Upper limits of output signal";
   parameter Real yMin = -yMax "Lower limits of output signal";
   parameter Modelica.Blocks.Types.Init initType = Modelica.Blocks.Types.Init.InitialState "Type of initialization (1: no init, 2: steady state, 3,4: initial output)" annotation(
@@ -15,8 +17,13 @@ model PIWithNonWindupLimiter "Proportional-Integral filter with non-windup limit
     Evaluate = true,
     choices(checkBox = true),
     Dialog(tab = "Advanced"));
-  Modelica.Blocks.Nonlinear.Limiter lim(limitsAtInit = true, strict = strict, uMax = yMax, uMin = yMin) annotation(
-    Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Nonlinear.Limiter lim(
+    strict=strict,
+    uMax=yMax,
+    uMin=yMin) annotation (Placement(visible=true, transformation(
+        origin={0,0},
+        extent={{-10,-10},{10,10}},
+        rotation=0)));
   Modelica.Blocks.Math.Feedback feedback annotation(
     Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Math.Gain G(k = Kp) annotation(

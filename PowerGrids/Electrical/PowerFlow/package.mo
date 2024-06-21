@@ -1,5 +1,4 @@
 within PowerGrids.Electrical;
-
 package PowerFlow "Components for power flow calculations"
   extends Modelica.Icons.Package;
 

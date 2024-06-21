@@ -19,14 +19,14 @@ initial equation
 equation
   connect(u, leadLag.u) annotation(
     Line(points = {{-120, 0}, {-62, 0}}, color = {0, 0, 127}));
-  
+
   if M > 1 then
     connect(leadLag.y, firstOrderCascade[1].u);
     connect(firstOrderCascade[M-1].y, y);
   else
     connect(leadLag.y, y);
-  end if;  
-  
+  end if;
+
   if M > 2 then
     for i in 1:M-2 loop
       connect(firstOrderCascade[i].y, firstOrderCascade[i+1].u);

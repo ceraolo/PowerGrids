@@ -1,13 +1,15 @@
 within PowerGrids.Controls.Test;
-
 model TestFreeOffset
   extends Modelica.Icons.Example;
   PowerGrids.Controls.FreeOffset freeOffset1 annotation(
     Placement(visible = true, transformation(origin = {0, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   FreeOffset freeOffset2(use_u = true)  annotation(
     Placement(visible = true, transformation(origin = {0, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Sources.Sine sine(freqHz = 1)  annotation(
-    Placement(visible = true, transformation(origin = {-44, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Sources.Sine sine(f=1) annotation (Placement(visible=true,
+        transformation(
+        origin={-44,-20},
+        extent={{-10,-10},{10,10}},
+        rotation=0)));
 initial equation
   freeOffset1.y = 1;
   freeOffset2.y = 2;

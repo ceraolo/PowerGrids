@@ -1,10 +1,13 @@
 within PowerGrids.Electrical.Test;
-
 model TestExciterVoltageTransducerIEEE
   extends Modelica.Icons.Example;
-  Modelica.ComplexBlocks.Sources.ComplexConstant V(k.re = -1, k.im = 1) annotation(
+  Modelica.ComplexBlocks.Sources.ComplexConstant V(k(
+                                                   re   = -1, im   = 1))
+                                                                        annotation(
     Placement(visible = true, transformation(origin = {-70, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.ComplexBlocks.Sources.ComplexConstant I(k.re = 1, k.im = 1) annotation(
+  Modelica.ComplexBlocks.Sources.ComplexConstant I(k(
+                                                   re   = 1, im   = 1))
+                                                                       annotation(
     Placement(visible = true, transformation(origin = {-70, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.VoltageTransducers.ExciterVoltageTransducerIEEE exciterVoltageTransducerIEEE(ki = 1,kp = sqrt(2), thetap = 0.785398, xl = 1)  annotation(
     Placement(visible = true, transformation(origin = {-3.33067e-15, -4.21885e-15}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));

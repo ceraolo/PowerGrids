@@ -1,5 +1,4 @@
 within PowerGrids.UsersGuide;
-
 package Contact
   extends Modelica.Icons.Contact;
   annotation(

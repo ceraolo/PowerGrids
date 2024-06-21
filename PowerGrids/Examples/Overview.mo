@@ -1,5 +1,4 @@
 within PowerGrids.Examples;
-
 package Overview
   extends Modelica.Icons.Information;
    annotation(

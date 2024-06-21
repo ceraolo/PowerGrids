@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.BaseClasses;
-
 partial model OnePortACdqPU "Base class for one-port AC components with p.u. Park's transformation"
   extends OnePortAC(
     final portVariablesPu = true);
@@ -15,10 +14,10 @@ partial model OnePortACdqPU "Base class for one-port AC components with p.u. Par
   Types.PerUnit uqPu(start = uqPuStart) "Voltage of quadrature axis in p.u.";
   Types.PerUnit idPu(start = idPuStart) "Current of direct axis in p.u.";
   Types.PerUnit iqPu(start = iqPuStart) "Current of quadrature axis in p.u.";
-  
+
   // other variables
   Types.Angle theta(start = thetaStart) "Rotation between machine rotor frame and port phasor frame";
-  
+
 initial equation
   // Park's transformations for start values
   port.vStart.re/port.VBase =  sin(thetaStart)*udPuStart + cos(thetaStart)*uqPuStart;
@@ -35,4 +34,5 @@ equation
 annotation(
     Documentation(info = "<html>
 This model provides a base class for all one-port AC components that use Park's transformation with per-unit currents and voltages.
-</html>"));end OnePortACdqPU;
+</html>"));
+end OnePortACdqPU;

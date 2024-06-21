@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Controls.TurbineGovernors;
-
 package BaseClasses
   extends Modelica.Icons.BasesPackage;
 

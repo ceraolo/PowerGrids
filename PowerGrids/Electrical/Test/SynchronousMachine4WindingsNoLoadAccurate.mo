@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model SynchronousMachine4WindingsNoLoadAccurate
   extends Modelica.Icons.Example;
   PowerGrids.Electrical.Buses.InfiniteBus bus(PStart = 0, SNom = 5.5e+08, UNom = 24000, UStart = 24000, X = 0, portVariablesPhases = true, portVariablesPu = true, theta = 0) annotation(

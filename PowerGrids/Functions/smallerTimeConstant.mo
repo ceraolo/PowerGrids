@@ -1,5 +1,4 @@
 within PowerGrids.Functions;
-
 function smallerTimeConstant
   extends Modelica.Icons.Function;
   input Real a;

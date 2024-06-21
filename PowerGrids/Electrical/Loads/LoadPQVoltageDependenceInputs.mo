@@ -1,8 +1,7 @@
 within PowerGrids.Electrical.Loads;
-
 model LoadPQVoltageDependenceInputs "Load model with voltage dependent P and Q specified by inputs"
   extends LoadPQVoltageDependence(
-    final PRef = PRefIn, 
+    final PRef = PRefIn,
     final QRef = QRefIn,
     final PRefConst = 0,
     final QRefConst = 0,

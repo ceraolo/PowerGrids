@@ -4,7 +4,8 @@ model LeadLag "Simple lead-lag filter"
   parameter Real k = 1 "Gain";
   parameter SI.Time T1 "Lead time constant";
   parameter SI.Time T2 "Lag time constant";
-  parameter Boolean noDynamics = not(T2 > 0) "Trivial configuration with no dynamics G(s) = k";
+  parameter Boolean noDynamics = not
+                                    (T2 > 0) "Trivial configuration with no dynamics G(s) = k";
   parameter Modelica.Blocks.Types.Init initType=Modelica.Blocks.Types.Init.NoInit "Type of initialization (1: no init, 2: steady state, 3/4: initial output)" annotation(Evaluate=true,
       Dialog(group="Initialization"));
   parameter Real yStart=0 "Initial or guess value of output (= state)" annotation (
@@ -15,7 +16,7 @@ model LeadLag "Simple lead-lag filter"
     Placement(visible = true, transformation(origin = {2, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Continuous.FirstOrder firstOrder(
     T = T1,
-    initType = initType,k = (T1 - T2) / (k * T1), y_start = yStart * (T1 - T2) / (k * T1)) if not noDynamics  
+    initType = initType,k = (T1 - T2) / (k * T1), y_start = yStart * (T1 - T2) / (k * T1)) if not noDynamics
     annotation(
     Placement(visible = true, transformation(origin = {2, -46}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   Modelica.Blocks.Sources.RealExpression zero if noDynamics annotation(

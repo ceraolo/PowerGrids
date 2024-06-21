@@ -1,6 +1,7 @@
 within PowerGrids.Electrical.VoltageTransducers;
 model ExciterVoltageTransducerIEEE "Exciter voltage transducer"
-  parameter SI.PerUnit kp = 9.3"First potential circuit gain";
+  parameter SI.PerUnit kp = 9.3
+                               "First potential circuit gain";
   parameter SI.Angle thetap = 0 "Potential circuit phase angle Thetap";
   parameter SI.PerUnit ki = 0 "Second potential circuit gain coefficient";
   parameter SI.PerUnit xl = 0.124 "Reactance associated with potential source";
@@ -20,9 +21,13 @@ model ExciterVoltageTransducerIEEE "Exciter voltage transducer"
     Placement(visible = true, transformation(origin = {130, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.ComplexBlocks.ComplexMath.PolarToComplex complexKp annotation(
     Placement(visible = true, transformation(origin = {-110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.ComplexBlocks.ComplexMath.Gain gainXl(k.re = 0, k.im = xl) annotation(
+  Modelica.ComplexBlocks.ComplexMath.Gain gainXl(k(
+                                                 re   = 0, im   = xl))
+                                                                      annotation(
     Placement(visible = true, transformation(origin = {-70, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.ComplexBlocks.ComplexMath.Gain J(k.re = 0, k.im = 1) annotation(
+  Modelica.ComplexBlocks.ComplexMath.Gain J(k(
+                                            re   = 0, im   = 1))
+                                                                annotation(
     Placement(visible = true, transformation(origin = {10, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.ComplexBlocks.ComplexMath.Product prod1 annotation(
     Placement(visible = true, transformation(origin = {50, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -30,7 +35,9 @@ model ExciterVoltageTransducerIEEE "Exciter voltage transducer"
     Placement(visible = true, transformation(origin = {90, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.ComplexBlocks.ComplexMath.Product prod2 annotation(
     Placement(visible = true, transformation(origin = {-70, 44}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.ComplexBlocks.Sources.ComplexConstant constKi(k.re = ki, k.im = 0) annotation(
+  Modelica.ComplexBlocks.Sources.ComplexConstant constKi(k(
+                                                         re   = ki, im   = 0))
+                                                                              annotation(
     Placement(visible = true, transformation(origin = {-50, -16}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
 equation
   connect(constKi.y, add1.u2) annotation(

@@ -11,4 +11,5 @@ equation
   connect(load.terminal, slack.terminal) annotation(
     Line(points = {{0, -4}, {0, 20}}));
 annotation(
-    Documentation(info = "<html><head></head><body>Simple test system with one slack node and one <a href=\"modelica://PowerGrids.Electrical.PowerFlow.ZLoad\"> ZLoad</a>.</body></html>"));end OneSlackOneZLoad;
+    Documentation(info = "<html><head></head><body>Simple test system with one slack node and one <a href=\"modelica://PowerGrids.Electrical.PowerFlow.ZLoad\"> ZLoad</a>.</body></html>"));
+end OneSlackOneZLoad;

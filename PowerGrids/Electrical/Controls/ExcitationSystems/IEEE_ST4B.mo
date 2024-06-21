@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Controls.ExcitationSystems;
-
 model IEEE_ST4B "Static excitation system - IEEE type ST4B "
   parameter SI.PerUnit kpr = 10.75 "Voltage regulator proportional gain";
   parameter Real kir(unit = "1/s") = 10.75 "Voltage regulator integral gain";
@@ -53,8 +52,11 @@ model IEEE_ST4B "Static excitation system - IEEE type ST4B "
     Placement(visible = true, transformation(origin = {-30, -56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Math.Product prod2 annotation(
     Placement(visible = true, transformation(origin = {10, -56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Nonlinear.Limiter limiterVbmax(limitsAtInit = true, uMax = vbmax, uMin = -Modelica.Constants.inf) annotation(
-    Placement(visible = true, transformation(origin = {50, -56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Nonlinear.Limiter limiterVbmax(uMax=vbmax, uMin=-Modelica.Constants.inf)
+    annotation (Placement(visible=true, transformation(
+        origin={50,-56},
+        extent={{-10,-10},{10,10}},
+        rotation=0)));
 equation
   connect(limiterVbmax.y, prod1.u2) annotation(
     Line(points = {{62, -56}, {92, -56}, {92, 24}, {98, 24}, {98, 24}}, color = {0, 0, 127}));

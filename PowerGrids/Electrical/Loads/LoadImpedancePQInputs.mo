@@ -1,8 +1,7 @@
 within PowerGrids.Electrical.Loads;
-
 model LoadImpedancePQInputs "Load model with impedance specified by PRefIn and QRefIn inputs"
   extends LoadImpedancePQ(
-    final PRef = PRefIn, 
+    final PRef = PRefIn,
     final QRef = QRefIn,
     final PRefConst = 0,
     final QRefConst = 0);

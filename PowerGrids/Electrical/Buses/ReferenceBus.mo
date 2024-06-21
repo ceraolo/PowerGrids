@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Buses;
-
 model ReferenceBus "Reference bus for an isolated grid"
   extends PowerGrids.Electrical.BaseClasses.OnePortAC;
   extends Icons.Bus;

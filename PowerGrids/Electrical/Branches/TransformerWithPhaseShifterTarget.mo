@@ -1,11 +1,11 @@
 within PowerGrids.Electrical.Branches;
 model TransformerWithPhaseShifterTarget
   extends TransformerWithPhaseShifterInterval(
-    final IMax = targetValueI + deadBandI, 
+    final IMax = targetValueI + deadBandI,
     final IMin = targetValueI - deadBandI,
     final PMax = targetValueP + deadBandP,
     final PMin = targetValueP - deadBandP);
-  
+
   parameter Types.Current targetValueI = NotUsed "Current target value" annotation(
   Dialog(enable = quantitySel == MonitoredQuantitySelection.currentMagnitude));
   parameter Types.Current deadBandI = NotUsed "Acceptable dead-band next to the Current target value" annotation(
@@ -25,7 +25,7 @@ initial equation
     assert(deadBandP > 0, "Dead band must be positive");
     assert(targetValueP >= 0, "Target value must be positive");
   end if;
-  
+
   annotation(
     Icon(coordinateSystem(grid = {0.1, 0.1})),
     Diagram(coordinateSystem(extent = {{-200, -100}, {200, 100}})),

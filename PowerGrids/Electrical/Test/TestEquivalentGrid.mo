@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model TestEquivalentGrid "Test case EquivalentGrid model"
   extends Modelica.Icons.Example;
   import Modelica.ComplexMath;
@@ -15,8 +14,12 @@ model TestEquivalentGrid "Test case EquivalentGrid model"
     Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Loads.LoadPQVoltageDependence load(PRefConst = 1e+07, QRefConst = 2e+07, SNom = 5e+08, UNom = 380000, portVariablesPhases = true)  annotation(
     Placement(visible = true, transformation(origin = {-20, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Sources.RealExpression shortCircuitCapacity(y = ComplexMath.'abs'(equivalentLine.portB.S) * equivalentGrid.c)  annotation(
-    Placement(visible = true, transformation(origin = {10, -81}, extent = {{-18, -15}, {18, 15}}, rotation = 0)));
+  Modelica.Blocks.Sources.RealExpression shortCircuitCapacity(y=
+        Modelica.ComplexMath.abs(equivalentLine.portB.S)*equivalentGrid.c)
+    annotation (Placement(visible=true, transformation(
+        origin={10,-81},
+        extent={{-18,-15},{18,15}},
+        rotation=0)));
 equation
   connect(load.terminal, equivalentGrid.terminal) annotation(
     Line(points = {{-20, 0}, {40, 0}, {40, 0}, {40, 0}}));

@@ -1,5 +1,4 @@
 within PowerGrids.Examples.ENTSOE;
-
 package Info "Information"
   extends Modelica.Icons.Information;
   annotation(

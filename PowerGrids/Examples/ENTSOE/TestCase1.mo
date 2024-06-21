@@ -1,5 +1,4 @@
 within PowerGrids.Examples.ENTSOE;
-
 model TestCase1 "Test Case 1, Section 5.1, focuses on the dynamic behavior of the model for the synchronous generator machine and its AVR"
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids annotation(
@@ -23,7 +22,7 @@ model TestCase1 "Test Case 1, Section 5.1, focuses on the dynamic behavior of th
 
   Types.PerUnit AA_01_GEN_Upu = GEN.port.VPu "Fig. 5.1, terminal voltage";
   Types.PerUnit AA_02_GEN_efd = GEN.ufPuIn "Fig. 5.2, excitation voltage";
-  
+
 
 equation
   connect(GEN.PPu, PSS.Vsi2Pu) annotation(

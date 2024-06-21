@@ -1,11 +1,10 @@
 within PowerGrids.Electrical.PowerFlow;
-
 model ZLoad "Load with constant impedance"
   extends BaseClasses.OnePortAC;
   extends Icons.Load;
   parameter Types.ActivePower PNom = SNom "Nominal active power";
   parameter Types.ActivePower QNom = 0 "Nominal reactive power";
-    
+
   parameter Types.ComplexImpedance Z = UNom^2/Complex(PNom, -QNom) "Constant impedance of the load";
 equation
   port.v = Z*port.i;

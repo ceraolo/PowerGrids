@@ -13,7 +13,7 @@ model TransformerWithPhaseShifterMax
   Dialog(enable = quantitySel == MonitoredQuantitySelection.activePower));
   parameter Types.ActivePower PStop = NotUsed "Stop Active Power threshold for phase shifter logic" annotation(
   Dialog(enable = quantitySel == MonitoredQuantitySelection.activePower));
-  
+
 initial equation
   if quantitySel == MonitoredQuantitySelection.currentMagnitude then
     assert(IMax > IStop, "Wrong current interval");
@@ -24,19 +24,19 @@ initial equation
     assert(PMax >= 0, "Active Power threshold PMax must be positive");
     assert(PStop >= 0, "Active Power threshold PMax must be positive");
   end if;
-  
+
 equation
 // phase shifter applied on output port
   locked = false;
   running = true;
-  
+
   if quantitySel == MonitoredQuantitySelection.currentMagnitude then
     valueUnderStop = portB.I < IStop;
     valueAboveMax  = portB.I > IMax;
   elseif quantitySel == MonitoredQuantitySelection.activePower then
     valueUnderStop = portB.P < PStop;
     valueAboveMax  = portB.P > PMax;
-  end if;  
+  end if;
 
   k = CM.fromPolar(1, kPhase[pre(tap)])
       "pre() is required because k influences the triggering conditions

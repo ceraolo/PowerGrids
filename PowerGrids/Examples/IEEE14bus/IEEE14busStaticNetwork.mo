@@ -8,387 +8,387 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
   PowerGrids.Electrical.Buses.ReferenceBus bus1(
     SNom = 100e6,
     UNom = 69e3,
-    UStart = 69e3*1.0598
-  ) annotation(
+    UStart = 69e3*1.0598)
+    annotation(
     Placement(visible = true, transformation(origin = {-130, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus2(
     SNom = 100e6,
-    UNom = 69e3
-  ) annotation(
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-90, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus3(
     SNom = 100e6,
-    UNom = 69e3
-  ) annotation(
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {120, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus4(
     SNom = 100e6,
-    UNom = 69e3
-  ) annotation(
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {114, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus5(
     SNom = 100e6,
-    UNom = 69e3
-  ) annotation(
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus6(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus7(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {120, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus8(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {160, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   PowerGrids.Electrical.Buses.Bus bus9(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {110, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus10(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus11(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-10, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus12(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-90, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus13(
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Buses.Bus bus14(
     SNom = 100e6,
-    UNom = 13.8e3  
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {30, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
 // Lines
   PowerGrids.Electrical.Branches.LineConstantImpedance L1to2(
     portVariablesPhases = true,
-    R = 0.922682, 
-    X = 2.81708, 
-    G = 0, 
-    B = 0.00110901, 
-    SNom = 100e6, 
-    UNom = 69e3
-  ) annotation(
+    R = 0.922682,
+    X = 2.81708,
+    G = 0,
+    B = 0.00110901,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-132, -30}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedanceWithBreakers L1to5(
     portVariablesPhases = true,
-    R = 2.57237, 
-    X = 10.6189, 
-    G = 0, 
-    B = 0.0010334, 
-    SNom = 100e6, 
-    UNom = 69e3
-  ) annotation(
+    R = 2.57237,
+    X = 10.6189,
+    G = 0,
+    B = 0.0010334,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-90, -52}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L2to3(
     portVariablesPhases = true,
-    R = 2.23719, 
-    X = 9.42535, 
-    G = 0, 
-    B = 0.000919975, 
-    SNom = 100e6, 
-    UNom = 69e3  
-  ) annotation(
+    R = 2.23719,
+    X = 9.42535,
+    G = 0,
+    B = 0.000919975,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {0, -90}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L2to4(
     portVariablesPhases = true,
-    R = 2.76662, 
-    X = 8.3946, 
-    G = 0, 
-    B = 0.000714136, 
-    SNom = 100e6, 
-    UNom = 69e3  
-  ) annotation(
+    R = 2.76662,
+    X = 8.3946,
+    G = 0,
+    B = 0.000714136,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {40, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L2to5(
     portVariablesPhases = true,
-    R = 2.71139, 
-    X = 8.27843, 
-    G = 0, 
-    B = 0.000726738, 
-    SNom = 100e6, 
-    UNom = 69e3
-  ) annotation(
+    R = 2.71139,
+    X = 8.27843,
+    G = 0,
+    B = 0.000726738,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L3to4(
     portVariablesPhases = true,
-    R = 3.19035, 
-    X = 8.14274, 
-    G = 0, 
-    B = 0.000268851, 
-    SNom = 100e6, 
-    UNom = 69e3
-  ) annotation(
+    R = 3.19035,
+    X = 8.14274,
+    G = 0,
+    B = 0.000268851,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {120, -60}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L4to5(
     portVariablesPhases = true,
-    R = 0.635593, 
-    X = 2.00486, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 69e3
-  ) annotation(
+    R = 0.635593,
+    X = 2.00486,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {40, -52}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L6to11(
     portVariablesPhases = true,
-    R = 0.18088, 
-    X = 0.378785, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.18088,
+    X = 0.378785,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-10, 20}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L6to12(
-    R = 0.23407, 
+    R = 0.23407,
     portVariablesPhases = true,
-    X = 0.487165, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    X = 0.487165,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-60, 60}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L6to13(
     portVariablesPhases = true,
-    R = 0.125976, 
-    X = 0.248086, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.125976,
+    X = 0.248086,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, 62}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L7to8(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.33546, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0,
+    X = 0.33546,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {140, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L7to9(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.209503, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0,
+    X = 0.209503,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {114, 20}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L9to10(
     portVariablesPhases = true,
-    R = 0.060579, 
-    X = 0.160922, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.060579,
+    X = 0.160922,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {60, 30}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L9to14(
     portVariablesPhases = true,
-    R = 0.242068, 
-    X = 0.514912, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3  
-  ) annotation(
+    R = 0.242068,
+    X = 0.514912,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {70, 72}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L10to11(
     portVariablesPhases = true,
-    R = 0.156256, 
-    X = 0.365778, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.156256,
+    X = 0.365778,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {20, 30}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L12to13(
     portVariablesPhases = true,
-    R = 0.42072, 
-    X = 0.380651, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.42072,
+    X = 0.380651,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-60, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.LineConstantImpedance L13to14(
     portVariablesPhases = true,
-    R = 0.325519, 
-    X = 0.662763, 
-    G = 0, 
-    B = 0, 
-    SNom = 100e6, 
-    UNom = 13.8e3
-  ) annotation(
+    R = 0.325519,
+    X = 0.662763,
+    G = 0,
+    B = 0,
+    SNom = 100e6,
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {0, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
 // Loads
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load2(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 21.7e6, 
+    PRefConst = 21.7e6,
     QRefConst = 12.7e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 69e3,
     URef = 72.105e3,
-    UStart = 72.0866e3,  
-    UPhaseStart = -0.087
-  ) annotation(
+    UStart = 72.0866e3,
+    UPhaseStart = -0.087)
+    annotation(
     Placement(visible = true, transformation(origin = {-90, -94}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load3(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 94.2e6, 
+    PRefConst = 94.2e6,
     QRefConst = 19.1e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 69e3,
     URef = 69.69e3,
-    UStart = 69.685e3,  
-    UPhaseStart = -0.22231
-  ) annotation(
+    UStart = 69.685e3,
+    UPhaseStart = -0.22231)
+    annotation(
     Placement(visible = true, transformation(origin = {120, -94}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load4(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 47.8e6, 
+    PRefConst = 47.8e6,
     QRefConst = -3.9e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 69e3,
     URef = 70.2756e3,
     UStart = 70.2049e3,
-    UPhaseStart = -0.180223
-  ) annotation(
+    UPhaseStart = -0.180223)
+    annotation(
     Placement(visible = true, transformation(origin = {136, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load5(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 7.6e6, 
+    PRefConst = 7.6e6,
     QRefConst = 1.6e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 69e3,
     URef = 70.4552e3,
     UStart = 70.3898e3,
-    UPhaseStart = -0.153511  
-  ) annotation(
+    UPhaseStart = -0.153511)
+    annotation(
     Placement(visible = true, transformation(origin = {-50, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load6(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 11.2e6, 
+    PRefConst = 11.2e6,
     QRefConst = 7.5e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.766e3,
-    UStart = 14.7347e3,  
-    UPhaseStart = -0.249364
-  ) annotation(
+    UStart = 14.7347e3,
+    UPhaseStart = -0.249364)
+    annotation(
     Placement(visible = true, transformation(origin = {-10, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load9(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 29.5e6, 
+    PRefConst = 29.5e6,
     QRefConst = 16.6e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.5966e3,
-    UStart = 14.5624e3,  
-    UPhaseStart = -0.261599  
-  ) annotation(
+    UStart = 14.5624e3,
+    UPhaseStart = -0.261599)
+    annotation(
     Placement(visible = true, transformation(origin = {130, 54}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load10(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 9e6, 
+    PRefConst = 9e6,
     QRefConst = 5.8e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.5241e3,
-    UStart = 14.4903e3,  
-    UPhaseStart = -0.264445  
-  ) annotation(
+    UStart = 14.4903e3,
+    UPhaseStart = -0.264445)
+    annotation(
     Placement(visible = true, transformation(origin = {40, 54}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load11(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 3.5e6, 
+    PRefConst = 3.5e6,
     QRefConst = 1.8e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.5959e3,
-    UStart = 14.5633e3,  
-    UPhaseStart = -0.259223
-  ) annotation(
+    UStart = 14.5633e3,
+    UPhaseStart = -0.259223)
+    annotation(
     Placement(visible = true, transformation(origin = {-10, 54}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load12(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 6.1e6, 
+    PRefConst = 6.1e6,
     QRefConst = 1.6e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.499e3,
-    UStart = 14.5308e3,  
-    UPhaseStart = -0.264428 
-  ) annotation(
+    UStart = 14.5308e3,
+    UPhaseStart = -0.264428)
+    annotation(
     Placement(visible = true, transformation(origin = {-90, 94}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load13(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 13.8e6, 
+    PRefConst = 13.8e6,
     QRefConst = 5.8e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.5634e3,
-    UStart = 14.4648e3,  
-    UPhaseStart = -0.265952  
-  ) annotation(
+    UStart = 14.4648e3,
+    UPhaseStart = -0.265952)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, 94}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Electrical.Loads.LoadPQVoltageDependence Load14(
     alpha = 1.5,
     beta = 2.5,
-    PRefConst = 14.9e6, 
+    PRefConst = 14.9e6,
     QRefConst = 5e6,
-    SNom = 100e6, 
+    SNom = 100e6,
     UNom = 13.8e3,
     URef = 14.3062e3,
-    UStart = 14.2714e3,  
-    UPhaseStart = -0.281002  
-  ) annotation(
+    UStart = 14.2714e3,
+    UPhaseStart = -0.281002)
+    annotation(
     Placement(visible = true, transformation(origin = {30, 94}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
 
 // Capacitor Bank
   PowerGrids.Electrical.Banks.CapacitorBankFixed Cbank9(
     B = 0.099769,
     SNom = 100e6,
-    UNom = 13.8e3
-  ) annotation(
+    UNom = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {110, 54}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
 
 // Transformers
@@ -400,8 +400,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
     rFixed = 0.204082,
     SNom = 100e6,
     UNomA = 69e3,
-    UNomB = 13.8e3
-  ) annotation(
+    UNomB = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {120, -18}, extent = {{10, 10}, {-10, -10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio T4to9(
     R = 0,
@@ -411,8 +411,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
     rFixed = 0.208333,
     SNom = 100e6,
     UNomA = 69.0e3,
-    UNomB = 13.8e3    
-  ) annotation(
+    UNomB = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {108, -18}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio T5to6(
     R = 0,
@@ -422,56 +422,56 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
     rFixed = 0.212766,
     SNom = 100e6,
     UNomA = 69e3,
-    UNomB = 13.8e3
-  ) annotation(
+    UNomB = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-30, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio Tgen1(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.393146, 
+    R = 0,
+    X = 0.393146,
     B = 0,
     G = 0,
     rFixed = 2.875,
-    SNom = 1211e6, 
-    UNomA = 24e3, 
-    UNomB = 69e3
-  ) annotation(
+    SNom = 1211e6,
+    UNomA = 24e3,
+    UNomB = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-130, 20}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.TransformerFixedRatioWithBreaker Tgen2(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.425089, 
+    R = 0,
+    X = 0.425089,
     B = 0,
     G = 0,
     rFixed = 2.875,
-    SNom = 1120e6, 
-    UNomA = 24e3, 
-    UNomB = 69e3
-  ) annotation(
+    SNom = 1120e6,
+    UNomA = 24e3,
+    UNomB = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {-130, -90}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio Tgen3(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.288545, 
+    R = 0,
+    X = 0.288545,
     B = 0,
     G = 0,
     rFixed = 3.45,
-    SNom = 1650e6, 
-    UNomA = 20e3, 
-    UNomB = 69e3
-  ) annotation(
+    SNom = 1650e6,
+    UNomA = 20e3,
+    UNomB = 69e3)
+    annotation(
     Placement(visible = true, transformation(origin = {150, -90}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio Tgen8(
     portVariablesPhases = true,
-    R = 0, 
-    X = 0.076176, 
+    R = 0,
+    X = 0.076176,
     B = 0,
     G = 0,
     rFixed = 0.766667,
-    SNom = 250e6, 
-    UNomA = 18e3, 
-    UNomB = 13.8e3
-  ) annotation(
+    SNom = 250e6,
+    UNomA = 18e3,
+    UNomB = 13.8e3)
+    annotation(
     Placement(visible = true, transformation(origin = {180, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
 
 // Generators
@@ -497,12 +497,11 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       PStart = -232.37e6,
       QStart = 15.7473e6,
       UStart = 25.4068e3,
-      UPhaseStart = 0.0171006
-    )
-  ) annotation(
+      UPhaseStart = 0.0171006))
+    annotation(
     Placement(visible = true, transformation(origin = {-130, 46}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   PowerGrids.Examples.IEEE14bus.ControlledGeneratorIEEE GEN2(
-    GEN(  
+    GEN(
       DPu = 0.0,
       H = 5.4,
       Tppd0 = 0.058,
@@ -523,12 +522,11 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       PStart = -40e6,
       QStart = -42.7306e6,
       UStart = 25.1608e3,
-      UPhaseStart = -0.0837392
-    )
-  ) annotation(
+      UPhaseStart = -0.0837392))
+    annotation(
     Placement(visible = true, transformation(origin = {-154, -90}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN3(
-    GEN( 
+    GEN(
       DPu = 0.0,
       H = 5.625,
       Tppd0 = 0.065,
@@ -549,9 +547,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       PStart = 0.0,
       QStart = -25.3998e6,
       UStart = 20.229e3,
-      UPhaseStart = -0.22231
-    )
-  ) annotation(
+      UPhaseStart = -0.22231))
+    annotation(
     Placement(visible = true, transformation(origin = {174, -90}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN6(
     GEN(
@@ -575,9 +572,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       PStart = 0,
       QStart = -15.0186e6,
       UStart = 14.7347e3,
-      UPhaseStart = -0.249364
-    )  
-  ) annotation(
+      UPhaseStart = -0.249364))
+    annotation(
     Placement(visible = true, transformation(origin = {-70, -10}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN8(
     GEN(
@@ -601,9 +597,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       PStart = 0,
       QStart = -16.2253e6,
       UStart = 19.6461e3,
-      UPhaseStart = -0.233851
-    )
-  ) annotation(
+      UPhaseStart = -0.233851))
+    annotation(
     Placement(visible = true, transformation(origin = {180, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
 equation

@@ -1,5 +1,4 @@
 within PowerGrids.Electrical.Test;
-
 model LoadImpedancePQ "Test case for LoadImpedancePQ"
   extends Modelica.Icons.Example;
   inner System systemPowerGrids annotation(
