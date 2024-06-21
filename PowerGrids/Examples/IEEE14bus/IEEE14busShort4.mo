@@ -1,8 +1,9 @@
 within PowerGrids.Examples.IEEE14bus;
-model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating in steady-state"
+model IEEE14busShort4
+  "Dynamic model of the IEEE 14-bus system, operating in steady-state"
   extends Modelica.Icons.Example;
   inner PowerGrids.Electrical.System systemPowerGrids(initOpt = PowerGrids.Types.Choices.InitializationOption.globalSteadyStateFixedPowerFlow, referenceFrequency = PowerGrids.Types.Choices.ReferenceFrequency.fixedReferenceGenerator)  annotation (
-    Placement(visible = true, transformation(origin={-144,80},    extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin={-148,84},    extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
 // Buses
   PowerGrids.Electrical.Buses.ReferenceBus bus1(
@@ -87,7 +88,7 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
     SNom = 100e6,
     UNom = 69e3)
     annotation (
-    Placement(visible = true, transformation(origin={-148,-30},    extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Placement(visible = true, transformation(origin={-150,-30},    extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   PowerGrids.Electrical.Branches.LineConstantImpedanceWithBreakers L1to5(
     portVariablesPhases = true,
     R = 2.57237,
@@ -448,7 +449,7 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
     UNomA = 24e3,
     UNomB = 69e3)
     annotation (
-    Placement(visible = true, transformation(origin={-136,-90},    extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin={-132,-90},    extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   PowerGrids.Electrical.Branches.TransformerFixedRatio Tgen3(
     portVariablesPhases = true,
     R = 0,
@@ -499,8 +500,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       UStart = 25.4068e3,
       UPhaseStart = 0.0171006))
     annotation (
-    Placement(visible = true, transformation(origin={-140,46},    extent={{-12,-8},
-            {12,8}},                                                                               rotation = 180)));
+    Placement(visible = true, transformation(origin={-138,47},    extent={{-14,
+            -8.99999},{14,8.99999}},                                                               rotation = 180)));
   PowerGrids.Examples.IEEE14bus.ControlledGeneratorIEEE GEN2(
     GEN(
       DPu = 0.0,
@@ -525,8 +526,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       UStart = 25.1608e3,
       UPhaseStart = -0.0837392))
     annotation (
-    Placement(visible = true, transformation(origin={-157,-84},    extent={{-10,
-            -6.99983},{10,6.99983}},                                                                rotation = -90)));
+    Placement(visible = true, transformation(origin={-153,-84},    extent={{-10,-7},
+            {10,7}},                                                                                rotation = -90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN3(
     GEN(
       DPu = 0.0,
@@ -551,8 +552,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       UStart = 20.229e3,
       UPhaseStart = -0.22231))
     annotation (
-    Placement(visible = true, transformation(origin={162,-79},    extent={{-13,
-            -5.99989},{13,5.99989}},                                                               rotation = 90)));
+    Placement(visible = true, transformation(origin={154,-90},    extent={{-14,
+            -6.00011},{14,6.00012}},                                                               rotation = 90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN6(
     GEN(
       xpqPu = 0.225,
@@ -577,8 +578,8 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       UStart = 14.7347e3,
       UPhaseStart = -0.249364))
     annotation (
-    Placement(visible = true, transformation(origin={-82,-7},     extent={{-13,
-            -5.99999},{13,5.99999}},                                                               rotation = -90)));
+    Placement(visible = true, transformation(origin={-81,-6},     extent={{-12,
+            -5.00002},{12,5.00001}},                                                               rotation = -90)));
   PowerGrids.Examples.IEEE14bus.SynchronousCondenser GEN8(
     GEN(
       xpqPu = 0.31,
@@ -603,7 +604,7 @@ model IEEE14busStaticNetwork "Dynamic model of the IEEE 14-bus system, operating
       UStart = 19.6461e3,
       UPhaseStart = -0.233851))
     annotation (
-    Placement(visible = true, transformation(origin={160,-22},    extent={{-14,
+    Placement(visible = true, transformation(origin={164,-22},    extent={{-14,
             -6.00001},{14,6.00001}},                                                               rotation = 0)));
 
 equation
@@ -658,9 +659,9 @@ equation
   connect(T5to6.terminalA, bus5.terminal) annotation (
     Line(points={{-46,-30},{-46,-40}}));
   connect(L1to2.terminalA, bus1.terminal) annotation (
-    Line(points={{-148,-20},{-148,0},{-146,0}}));
+    Line(points={{-150,-20},{-150,0},{-146,0}}));
   connect(L1to2.terminalB, bus2.terminal) annotation (
-    Line(points={{-148,-40},{-148,-70},{-112,-70},{-112,-80},{-106,-80}}));
+    Line(points={{-150,-40},{-150,-70},{-112,-70},{-112,-80},{-106,-80}}));
   connect(L1to5.terminalA, bus1.terminal) annotation (
     Line(points={{-116,-52},{-140,-52},{-140,0},{-146,0}}));
   connect(L1to5.terminalB, bus5.terminal) annotation (
@@ -688,7 +689,7 @@ equation
   connect(Tgen3.terminalB, bus3.terminal) annotation (
     Line(points={{124,-90},{112,-90},{112,-80},{104,-80}}));
   connect(Tgen2.terminalB, bus2.terminal) annotation (
-    Line(points={{-126,-90},{-112,-90},{-112,-80},{-106,-80}}));
+    Line(points={{-122,-90},{-112,-90},{-112,-80},{-106,-80}}));
   connect(Tgen1.terminalB, bus1.terminal) annotation (
     Line(points={{-146,10},{-146,0}}));
   connect(Load12.terminal, bus12.terminal) annotation (
@@ -716,27 +717,26 @@ equation
   connect(L2to3.terminalA, bus2.terminal) annotation (
     Line(points={{-26,-90},{-98,-90},{-98,-80},{-106,-80}}));
   connect(Tgen1.terminalA, GEN1.terminal) annotation (
-    Line(points={{-146,30},{-146,48.6667},{-146.667,48.6667}}));
+    Line(points={{-146,30},{-146,50},{-145.778,50}}));
   connect(GEN2.terminal, Tgen2.terminalA) annotation (
-    Line(points={{-159.333,-89.5556},{-154,-89.5556},{-154,-90},{-146,-90}}));
+    Line(points={{-155.333,-89.5556},{-142,-89.5556},{-142,-90}}));
   connect(Tgen3.terminalA, GEN3.terminal) annotation (
-    Line(points={{144,-90},{152,-90},{152,-77.5556},{162,-77.5556}}));
+    Line(points={{144,-90},{152,-90},{152,-88.4444},{154,-88.4444}}));
   connect(GEN8.terminal, Tgen8.terminalA) annotation (
-    Line(points={{161.556,-22},{161.556,-18},{164,-18},{164,-10}}));
+    Line(points={{165.556,-22},{164,-22},{164,-10}}));
   connect(Load4.terminal, bus4.terminal) annotation (
     Line(points={{120,-50},{120,-46},{106,-46},{106,-40},{98,-40}}));
   connect(GEN6.terminal, bus6.terminal) annotation (
-    Line(points={{-82,-8.44444},{-52,-8.44444},{-52,0},{-46,0}}));
+    Line(points={{-81,-7.33333},{-52,-7.33333},{-52,0},{-46,0}}));
   connect(T4to7.terminalA, bus4.terminal) annotation (
     Line(points={{104,-28},{104,-40},{98,-40}}));
   connect(T4to7.terminalB, bus7.terminal) annotation (
     Line(points={{104,-8},{104,0}}));
   connect(GEN1.omega, systemPowerGrids.omegaRefIn) annotation (
-    Line(points={{-156,48.6667},{-170,48.6667},{-170,80},{-153.8,80},{-153.8,
-          80.2}},                                                               color = {0, 0, 127}));
+    Line(points={{-156.667,50},{-168,50},{-168,84.2},{-157.8,84.2}},            color = {0, 0, 127}));
   annotation (
-    Icon(coordinateSystem(extent={{-180,-100},{180,110}})),
-    Diagram(coordinateSystem(extent={{-180,-100},{180,110}})),
+    Icon(coordinateSystem(            extent={{-180,-110},{180,110}})),
+    Diagram(coordinateSystem(extent={{-180,-110},{180,110}})),
     experiment(StartTime = 0, StopTime = 1, Tolerance = 1e-6, Interval = 0.002),
    __OpenModelica_simulationFlags(homotopyOnFirstTry="()"));
-end IEEE14busStaticNetwork;
+end IEEE14busShort4;
